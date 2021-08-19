@@ -1,5 +1,3 @@
-import { SWAPI_PEOPLE, SWAPI_ROOT } from '../const/api'
-
 export const getApiResources = async (url) => {
 	try {
 		const res = await fetch(url)
@@ -14,10 +12,3 @@ export const getApiResources = async (url) => {
 		return false
 	}
 }
-
-// getApiResources(SWAPI_ROOT + SWAPI_PEOPLE).then((data) => console.log(data))
-
-// (async () => {
-// 	const data = await getApiResources(SWAPI_ROOT + SWAPI_PEOPLE)
-// 	console.log(data)
-// })()

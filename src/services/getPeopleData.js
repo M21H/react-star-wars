@@ -4,7 +4,7 @@ const _checkProtocol = (url) => {
 	if (url.indexOf(HTTPS) !== -1) {
 		return HTTPS
 	}
-
+  
 	return HTTP
 }
 

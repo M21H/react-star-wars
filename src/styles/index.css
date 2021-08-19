@@ -16,8 +16,11 @@ html {
 	--color-black: #000;
 	--color-dark-grey: #10100e;
 	--color-dark-white: #fff;
+  --color-yellow: #ffff00;
 
   --border-radius-small: 3px;
+
+  --font-size-header: 26px;
 
   --space-medium: 20px
 }

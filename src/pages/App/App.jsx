@@ -1,4 +1,4 @@
-import PeoplePage from '../../pages/PeoplePage'
+import PeoplePage from '@pages/PeoplePage'
 
 const App = () => {
 	return (
