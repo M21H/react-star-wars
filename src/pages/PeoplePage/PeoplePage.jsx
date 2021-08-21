@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
-import { getApiResources } from '@utils/network'
-import { API_PEOPLE } from '@const/api'
-import { getPeopleId, getPeopleImg } from '@services/getPeopleData'
-import PeopleList from '@components/PeopleList'
+import PropsType from 'prop-types'
+
 import { withApiError } from '@hoc/withApiError'
+import PeopleList from '@components/PeopleList'
+import { getApiResources } from '@utils/network'
+import { getPeopleId, getPeopleImg } from '@services/getPeopleData'
+import { API_PEOPLE } from '@const/api'
+
+import styles from './PeoplePage.module.css'
 
 const PeoplePage = ({ setErrorAPI }) => {
 	const [people, setPeople] = useState(null)
@@ -31,10 +35,14 @@ const PeoplePage = ({ setErrorAPI }) => {
 
 	return (
 		<>
-			<h2>Navigations</h2>
+			<h2 className='header__text'>Navigations</h2>
 			{people && <PeopleList people={people} />}
 		</>
 	)
 }
 
 export default withApiError(PeoplePage)
+
+PeoplePage.propsType = {
+	setErrorAPI: PropsType.func
+}

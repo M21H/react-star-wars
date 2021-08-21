@@ -3,7 +3,7 @@
   place-items: center;
   height: 100vh;
   font-size: var(--font-size-header);
-  text-shadow: 0 0 2px var(--color-dark-white);
+  text-shadow: 0 0 2px var(--color-white);
   color: var(--color-yellow);
 
   -webkit-text-stroke-color: var(--color-yellow);
