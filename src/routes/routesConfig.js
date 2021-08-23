@@ -1,6 +1,4 @@
-import PeoplePage from '@pages/PeoplePage'
-import HomePage from '@pages/HomePage'
-import NotFoundPage from '@pages/NotFoundPage'
+import { HomePage, NotFoundPage, PeoplePage } from '@pages'
 
 export const routesConfig = [
 	{

@@ -12,6 +12,7 @@ module.exports = function override(config, env) {
 		'@utils': 'src/utils',
 		'@routes': 'src/routes',
 		'@assets': 'src/assets',
+		'@hooks': 'src/hooks',
 	})(config)
 
 	return config

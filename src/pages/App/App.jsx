@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom'
 
 import { routesConfig } from '@routes/routesConfig'
-import Header from '@components/Header'
+import { Header } from '@components'
 
 import styles from './App.module.css'
 
@@ -10,8 +10,8 @@ const App = () => {
 		<div className={styles.wrapper}>
 			<Header />
 			<Switch>
-				{routesConfig.map((route, index) => (
-					<Route key={index} path={route.path} exact={route.exact} component={route.component} />
+				{routesConfig.map(({ path, exact, component }, index) => (
+					<Route key={index} path={path} exact={exact} component={component} />
 				))}
 			</Switch>
 		</div>
