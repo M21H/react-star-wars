@@ -26,6 +26,7 @@ html {
 	--transition: 0.4s;
 
 	--border-radius-small: 3px;
+	--border-radius-medium: 5px;
 
 	--font-size-main: 16px;
 	--font-size-header: 26px;
@@ -34,9 +35,12 @@ html {
 
 	--width-max: 1200px;
 
+	--space-ultra-small: 5px;
 	--space-small: 10px;
 	--space-medium: 20px;
 	--space-large: 30px;
+
+	--margin-list: 7px;
 
 	--text-shadow-yellow: 0 0 2px var(--color-white), 0 0 40px var(--color-yellow);
 	--text-shadow-blue: 0 0 2px var(--color-white), 0 0 40px var(--color-blue);
