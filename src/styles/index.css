@@ -22,8 +22,7 @@ html {
 	--color-yellow: #ffff00;
 	--color-blue: #6a83fb;
 	--color-violet: #ae72c2;
-
-	--transition: 0.4s;
+	--color-red: #f75d83;
 
 	--border-radius-small: 3px;
 	--border-radius-medium: 5px;
@@ -41,6 +40,8 @@ html {
 	--space-large: 30px;
 
 	--margin-list: 7px;
+
+	--transition: 0.4s;
 
 	--text-shadow-yellow: 0 0 2px var(--color-white), 0 0 40px var(--color-yellow);
 	--text-shadow-blue: 0 0 2px var(--color-white), 0 0 40px var(--color-blue);

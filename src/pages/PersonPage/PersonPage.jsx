@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import PropsType from 'prop-types'
 
 import { withApiError } from '@hoc/withApiError'
 
 import { PersonInfo, PersonPhoto, PersonLinkBack } from '@components'
+import { UiLoading } from '@ui'
 
 import { getApiResources } from '@utils/network'
 import { getPeopleImg } from '@services/getPeopleData'
@@ -11,10 +12,13 @@ import { API_PERSON } from '@const/api'
 
 import styles from './PersonPage.module.css'
 
+const PersonFilms = React.lazy(() => import('@components/PersonPage/PersonFilms/PersonFilms'))
+
 const PersonPage = ({ setErrorAPI, match }) => {
 	const [personInfo, setPersonInfo] = useState(null)
 	const [personName, setPersonName] = useState(null)
 	const [personPhoto, setPersonPhoto] = useState(null)
+	const [personFilms, setPersonFilms] = useState(null)
 
 	useEffect(() => {
 		;(async () => {
@@ -31,6 +35,9 @@ const PersonPage = ({ setErrorAPI, match }) => {
 				])
 				setPersonName(res.name)
 				setPersonPhoto(getPeopleImg(id))
+
+				res.films && setPersonFilms(res.films)
+
 				setErrorAPI(false)
 			} else {
 				setErrorAPI(true)
@@ -47,6 +54,11 @@ const PersonPage = ({ setErrorAPI, match }) => {
 				<div className={styles.container}>
 					<PersonPhoto personPhoto={personPhoto} personName={personName} />
 					{personInfo && <PersonInfo personInfo={personInfo} />}
+					{personFilms && (
+						<Suspense fallback={<UiLoading theme='red' isShadow />}>
+							<PersonFilms personFilms={personFilms} />
+						</Suspense>
+					)}
 				</div>
 			</div>
 		</>
