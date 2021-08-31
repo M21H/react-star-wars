@@ -4,12 +4,17 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -23,7 +28,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ], 
+    ],
     "overrides": [
       {
         "files": [

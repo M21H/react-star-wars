@@ -20,7 +20,6 @@ const PeoplePage = ({ setErrorAPI }) => {
 
 	const getResource = async (url) => {
 		const res = await getApiResources(url)
-		console.log(res)
 
 		if (res) {
 			setPeople(

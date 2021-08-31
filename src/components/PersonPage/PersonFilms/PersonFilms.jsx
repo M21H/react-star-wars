@@ -7,7 +7,6 @@ import styles from './PersonFilms.module.css'
 
 const PersonFilms = ({ personFilms }) => {
 	const [filmsName, setFilmsName] = useState([])
-	console.log(personFilms)
 
 	useEffect(() => {
 		;(async () => {

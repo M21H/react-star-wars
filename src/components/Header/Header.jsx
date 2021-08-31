@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { Favorite } from '@components'
 
 import styles from './Header.module.css'
 
@@ -13,6 +14,9 @@ const Header = () => {
 				</li>
 				<li>
 					<NavLink to='/people/?page=1'>People</NavLink>
+				</li>
+				<li>
+					<Favorite />
 				</li>
 			</ul>
 		</div>
