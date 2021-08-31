@@ -13,8 +13,16 @@ html {
 :root {
 	--font-family-main: sans-serif;
 
-	--theme-default-header: #cccc46;
-	--theme-default-bgimage: url('@assets/img/bg.jpg');
+	/* THEMES */
+	--theme-ligth-header: var(--color-white);
+	--theme-dark-header: var(--color-red);
+	--theme-neitral-header: var(--color-yellow);
+	--theme-default-header: var(--theme-neitral-header);
+
+	--theme-ligth-bgimage: linear-gradient(to right bottom, #051937, #162454, #312d70, #533389, #7a359f);
+	--theme-dark-bgimage: linear-gradient(to right bottom, #000000, #160b11, #20141e, #281b2e, #2b2440);
+	--theme-neitral-bgimage: url('@assets/img/bg.jpg');
+	--theme-default-bgimage: var(--theme-neitral-bgimage);
 
 	--color-black: #000;
 	--color-dark-grey: #10100e;
@@ -70,6 +78,7 @@ img {
 	line-height: 1.7;
 	font-size: var(--font-size-header);
 	text-shadow: 0 0 2px var(--color-black);
+	/* text-shadow: var(--text-shadow-yellow); */
 	color: var(--theme-default-header);
 	transition: color var(--transition);
 }
