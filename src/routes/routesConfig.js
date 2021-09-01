@@ -1,4 +1,4 @@
-import { HomePage, NotFoundPage, PeoplePage, PersonPage, FavoritePage } from '@pages'
+import { HomePage, NotFoundPage, PeoplePage, PersonPage, FavoritePage, SearchPage } from '@pages'
 
 export const routesConfig = [
 	{
@@ -20,6 +20,16 @@ export const routesConfig = [
 		path: '/favorites',
 		exact: true,
 		component: FavoritePage,
+	},
+	{
+		path: '/search',
+		exact: true,
+		component: SearchPage,
+	},
+	{
+		path: '/not-found',
+		exact: true,
+		component: NotFoundPage,
 	},
 	{
 		path: '*',

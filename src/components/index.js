@@ -8,3 +8,4 @@ export { default as PersonLinkBack } from './PersonPage/PersonLinkBack/PersonLin
 export { default as PersonFilms } from './PersonPage/PersonFilms/PersonFilms'
 export { default as Favorite } from './Favorite/Favorite'
 export { default as ChooseSide } from './HomePage/ChooseSide'
+export { default as SearchPageInfo } from './SearchPage/SearchPageInfo/SearchPageInfo'
