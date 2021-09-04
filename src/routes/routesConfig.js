@@ -1,4 +1,5 @@
 import { HomePage, NotFoundPage, PeoplePage, PersonPage, FavoritePage, SearchPage } from '@pages'
+import { ErrorMessage } from '@components'
 
 export const routesConfig = [
 	{
@@ -25,6 +26,11 @@ export const routesConfig = [
 		path: '/search',
 		exact: true,
 		component: SearchPage,
+	},
+	{
+		path: '/fail',
+		exact: true,
+		component: ErrorMessage,
 	},
 	{
 		path: '/not-found',
